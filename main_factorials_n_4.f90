@@ -1,6 +1,7 @@
-! Leonard - cmcc, 10/06/2024, program to calculate the factorial of a number m <= n
-
-program factorials_m_less_to_n
+ ! Leonard-cmcc, 11/06/2024 factorial of n with module holding the factorial subroutine
+ 
+program factorials_n
+    use factorial_module
     implicit none
     integer :: n, m
     integer, dimension(:), allocatable :: factorials
@@ -26,23 +27,5 @@ program factorials_m_less_to_n
     ! Deallocate the array
     deallocate(factorials)
     
-    subroutine calculate_factorial(m, result)
-    implicit none
-    integer, intent(in) :: m
-    integer, intent(out) :: result
-    integer :: i
-
-    ! Initialize result to 1
-    result = 1
-
-    ! Calculate factorial
-    if (m > 1) then
-        do i = 2, m
-            result = result * i
-        end do
-    end if
-end subroutine calculate_factorial
-end program factorials_m_less_to_n
-
-
+end program factorials_n
 

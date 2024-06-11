@@ -7,5 +7,5 @@ print *, 'enter the number'
 read(*,*) x
 !The square of the number
 y=x**2
-print *, 'the square', 'of', 'the', 'number', 'is:', y
+print *, 'the square of the number is:', y
 end program square_number
